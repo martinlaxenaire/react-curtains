@@ -1,5 +1,7 @@
 <h1>ShaderPass</h1>
 
+[Back to readme](README.md)
+
 The `<ShaderPass />` component will create a WebGL ShaderPass (using a RenderTarget object), acting as a wrapper for the curtains.js <a href="https://www.curtainsjs.com/shader-pass-class.html">ShaderPass class</a>.
 
 #### Usage

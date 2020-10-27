@@ -1,5 +1,7 @@
 <h1>PingPongPlane</h1>
 
+[Back to readme](README.md)
+
 The `<PingPongPlane />` component will create a WebGL PingPongPlane (using a Plane object), acting as a wrapper for the curtains.js <a href="https://www.curtainsjs.com/ping-pong-plane-class.html">PingPongPlane class</a>.
 
 #### Usage

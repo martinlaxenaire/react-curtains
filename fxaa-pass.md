@@ -1,5 +1,7 @@
 <h1>FXAAPass</h1>
 
+[Back to readme](README.md)
+
 The `<FXAAPass />` component will create a WebGL FXAAPass (using a ShaderPass object), acting as a wrapper for the curtains.js <a href="https://www.curtainsjs.com/fxaa-pass-class.html">FXAAPass class</a>.
 
 #### Usage

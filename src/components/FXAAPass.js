@@ -1,6 +1,6 @@
 import {useRef} from 'react';
 import {useCurtains} from '../hooks';
-import {FXAAPass as WebGLFXAAPass, ShaderPass as WebGLShaderPass} from 'curtainsjs';
+import {FXAAPass as WebGLFXAAPass} from 'curtainsjs';
 
 export function FXAAPass(props) {
     // extract fxaa parameters from props

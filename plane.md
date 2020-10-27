@@ -1,5 +1,7 @@
 <h1>Plane</h1>
 
+[Back to readme](README.md)
+
 The `<Plane />` component will create a WebGL Plane, acting as a wrapper for the curtains.js <a href="https://www.curtainsjs.com/plane-class.html">Plane class</a>.
 
 #### Usage

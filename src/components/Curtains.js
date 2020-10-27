@@ -160,5 +160,3 @@ export function Curtains(props) {
         </CurtainsProvider>
     );
 }
-
-//export default Curtains;

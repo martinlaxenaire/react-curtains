@@ -1,5 +1,7 @@
 <h1>Curtains</h1>
 
+[Back to readme](README.md)
+
 The `<Curtains></Curtains>` component is responsible for the creation of the WebGL context. It will act as a wrapper for the curtains.js <a href="https://www.curtainsjs.com/curtains-class.html">Curtains class</a>.
 
 This component will create a React context that will be used in the custom `useCurtains` and `useCurtainsEvent` hooks onto which the other components rely.
@@ -42,7 +44,7 @@ You can also use React props and events like `className` or `onClick`. They can 
 
 #### Events
 
-You can also pass aa a prop a function to execute for each corresponding <a href="https://www.curtainsjs.com/curtains-class.html#events">Curtains class events</a>. You'll have access to your `curtains` instance inside all of them.
+You can also pass as props a function to execute for each corresponding <a href="https://www.curtainsjs.com/curtains-class.html#events">Curtains class events</a>. You'll have access to your `curtains` instance inside all of them.
 
 ```jsx
 function MainCurtains() {

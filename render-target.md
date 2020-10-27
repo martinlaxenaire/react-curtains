@@ -1,5 +1,7 @@
 <h1>RenderTarget</h1>
 
+[Back to readme](README.md)
+
 The `<RenderTarget />` component will create a WebGL RenderTarget (or Frame Buffer Object), acting as a wrapper for the curtains.js <a href="https://www.curtainsjs.com/render-target-class.html">RenderTarget class</a>.
 
 #### Usage

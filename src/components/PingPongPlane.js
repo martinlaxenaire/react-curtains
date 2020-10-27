@@ -1,4 +1,4 @@
-import React, {useRef, useEffect, useState} from 'react';
+import React, {useRef, useEffect} from 'react';
 import {useCurtains} from '../hooks';
 import {PingPongPlane as WebGLPingPongPlane, Vec3, Vec2} from 'curtainsjs';
 
