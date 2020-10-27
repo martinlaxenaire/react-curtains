@@ -1,0 +1,31 @@
+{
+  "name": "react-curtains",
+  "version": "0.1.0",
+  "description": "react-curtains is an attempt at converting curtains.js WebGL classes into reusable React components.",
+  "main": "src/index.js",
+  "keywords": [
+    "react",
+    "webgl",
+    "curtains.js",
+    "curtainsjs",
+  ],
+  "author": {
+    "name": "Martin Laxenaire",
+    "email": "martin.laxenaire@gmail.com",
+    "url": "https://twitter.com/webdesign_ml"
+  },
+  "homepage": "https://github.com/martinlaxenaire/react-curtains",
+  "bugs": {
+    "url": "https://github.com/martinlaxenaire/react-curtains/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/martinlaxenaire/react-curtains.git"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=17.0",
+    "react-dom": ">=17.0",
+    "curtainsjs": ">=7.1.4"
+  }
+}
