@@ -17,7 +17,7 @@ npm install react-curtains
 
 ### Components
 
-react-curtains introduce a bunch of components based on curtains.js classes:
+react-curtains introduces a bunch of components based on curtains.js classes:
 
 - [Curtains](curtains.md)
 - [Plane](plane.md)
