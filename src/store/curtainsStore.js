@@ -1,4 +1,4 @@
-import React, {createContext} from "react";
+import React, {createContext, useReducer} from "react";
 
 const initialState = {
     curtains: null,
@@ -13,11 +13,10 @@ const initialState = {
     },
 };
 
-const CurtainsContext = createContext(initialState);
-const { Provider } = CurtainsContext;
+export const CurtainsContext = createContext(initialState);
 
-const CurtainsProvider = ({ children }) => {
-    const [state, dispatch] = React.useReducer((state, action) => {
+export function CurtainsProvider({ children }) {
+    const [state, dispatch] = useReducer((state, action) => {
         switch (action.type) {
             case "SET_CURTAINS":
                 return {
@@ -56,7 +55,11 @@ const CurtainsProvider = ({ children }) => {
         }
     }, initialState);
 
-    return <Provider value={{ state, dispatch }}>{children}</Provider>;
-};
+    return (
+        <CurtainsContext.Provider value={{ state, dispatch }}>
+            {children}
+        </CurtainsContext.Provider>
+    );
+}
 
-export { CurtainsContext, CurtainsProvider };
+//export { CurtainsContext, CurtainsProvider };

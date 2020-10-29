@@ -104,8 +104,6 @@ export function PingPongPlane(props) {
                 .onRender(() => {
                     onRender && onRender(webglPlane.current);
                 });
-
-            console.warn(">>> Adding plane", webglPlane.current);
         }
 
         let currentPlane = webglPlane.current;
@@ -114,7 +112,6 @@ export function PingPongPlane(props) {
             if(currentPlane) {
                 onBeforeRemove && onBeforeRemove(currentPlane);
 
-                console.warn(">>> Disposing plane", currentPlane.index);
                 currentPlane.remove();
             }
         }

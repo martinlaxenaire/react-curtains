@@ -1,6 +1,9 @@
 <h1>react-curtains</h1>
 
-react-curtains is an attempt at converting <a href="https://www.curtainsjs.com/">curtains.js</a> WebGL classes into reusable React components.
+react-curtains is an attempt at converting <a href="https://github.com/martinlaxenaire/curtainsjs">curtains.js</a> WebGL classes into reusable React components.
+
+[![Version](https://img.shields.io/npm/v/react-curtains?style=flat&colorA=f5f5f5&colorB=f5f5f5)](https://npmjs.com/package/react-curtains)
+[![Twitter](https://img.shields.io/twitter/follow/webdesign_ml?label=%40webdesign_ml&style=flat&colorA=f5f5f5&colorB=f5f5f5&logo=twitter&logoColor=000000)](https://twitter.com/webdesign_ml)
 
 ## Getting started
 
@@ -60,7 +63,23 @@ useCurtainsEvent("onScroll", (curtains) => {
 });
 ```
 
-### Basic example
+### Examples
+
+#### Explore
+
+Here are codesandboxes ports of some of the official documentation examples:
+
+- <a href="https://codesandbox.io/s/react-curtains-basic-plane-h30ie">Basic plane</a>
+- <a href="https://codesandbox.io/s/react-curtains-vertex-coordinates-helper-b0b06">Vertex coordinates helper</a>
+- <a href="https://codesandbox.io/s/react-curtains-simple-plane-ukzxi">Simple plane</a>
+- <a href="https://codesandbox.io/s/react-curtains-simple-video-plane-ckozr">Simple video plane</a>
+- <a href="https://codesandbox.io/s/react-curtains-slideshow-i7uim">Slideshow</a>
+- <a href="https://codesandbox.io/s/react-curtains-multiple-planes-zh9bt">Multiple planes</a>
+- <a href="https://codesandbox.io/s/react-curtains-multiple-planes-post-processed-1g5zj">Multiple planes with post processing</a>
+- <a href="https://codesandbox.io/s/react-curtains-selective-render-targets-vbsez">Selective render targets</a>
+- <a href="https://codesandbox.io/s/react-curtains-flowmap-0hn2t">Flowmap</a>
+
+#### Basic example
 
 This is the port of <a href="https://www.curtainsjs.com/examples/basic-plane/index.html">curtains.js documentation basic example</a>:
 

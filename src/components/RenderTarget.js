@@ -1,4 +1,6 @@
 import {Children, cloneElement, isValidElement, useState, useEffect} from 'react';
+import {ShaderPass} from './ShaderPass';
+import {Plane} from './Plane';
 import {useCurtains} from '../hooks';
 import {RenderTarget as WebGLRenderTarget} from 'curtainsjs';
 
@@ -51,10 +53,6 @@ export function RenderTarget(props) {
         else if(!renderTarget) {
             setRenderTarget(existingRenderTarget[0]);
         }
-
-
-
-
     });
 
     useEffect(() => {
@@ -87,10 +85,10 @@ export function RenderTarget(props) {
         else if(renderTarget) {
             const compChildren = recursiveMap(props.children, child => {
                 // our callback
-                if(child.type.name === "Plane") {
+                if(child.type === Plane) {
                     return cloneElement(child, {...child.props, target: renderTarget});
                 }
-                else if(child.type.name === "ShaderPass") {
+                else if(child.type === ShaderPass) {
                     let augmentedProps = {...child.props, renderTarget: renderTarget};
 
                     // add uniqueKey if needed and not set
@@ -116,5 +114,4 @@ export function RenderTarget(props) {
     }, [renderTarget, autoDetectChildren]);
 
     return children;
-
 }

@@ -29,6 +29,7 @@ ReactDOM.render(
 #### Properties
 
 Except for the container, which will be set internally, you can pass any of the <a href="https://www.curtainsjs.com/curtains-class.html#curtains-init-params">Curtains class parameters</a> as a React prop to your component.
+Also note that the `production` property is set to `false` on development and `true` on production environments by default.
 
 You can also use React props and events like `className` or `onClick`. They can be used to style your canvas container and listen to events:
 

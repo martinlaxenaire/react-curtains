@@ -67,8 +67,6 @@ function CurtainsWrapper(props) {
                 watchScroll,
             });
 
-            console.warn(">>> Setting curtains context", curtains.current);
-
             dispatch({
                 type: "SET_CURTAINS",
                 curtains: curtains.current,
@@ -78,7 +76,6 @@ function CurtainsWrapper(props) {
         const currentCurtains = curtains.current;
         return () => {
             if(currentCurtains) {
-                console.warn(">>> Disposing curtains context");
                 currentCurtains.dispose();
             }
         }
@@ -138,7 +135,7 @@ function CurtainsWrapper(props) {
                     });
                 });
         }
-    }, [state]);
+    });
 
     validProps.className = validProps.className || "curtains-canvas";
 

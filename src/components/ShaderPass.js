@@ -80,13 +80,6 @@ export function ShaderPass(props) {
             }
 
             currentShaderPass = webglShaderPass.current;
-
-            console.warn(">>> Adding shader pass", webglShaderPass.current);
-
-            if(renderTarget) {
-                console.warn(">>> Is it a scene pass (it shouldn't)?", webglShaderPass.current._isScenePass);
-            }
-
         }
         else if(!webglShaderPass.current) {
             webglShaderPass.current = existingPass[0];
@@ -95,7 +88,6 @@ export function ShaderPass(props) {
 
         return () => {
             if(currentShaderPass) {
-                console.warn(">>> Disposing shader pass");
                 currentShaderPass.remove();
             }
         }

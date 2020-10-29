@@ -69,8 +69,6 @@ export function FXAAPass(props) {
             }
 
             currentFXAAPass = webglFXAAPass.current;
-
-            console.warn(">>> Adding shader FXAA", webglFXAAPass.current);
         }
         else if(!webglFXAAPass.current) {
             webglFXAAPass.current = {
@@ -80,7 +78,6 @@ export function FXAAPass(props) {
 
         return () => {
             if(currentFXAAPass) {
-                console.warn(">>> Disposing FXAA pass");
                 currentFXAAPass.pass.remove();
             }
         }

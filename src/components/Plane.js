@@ -106,8 +106,6 @@ export function Plane(props) {
                 .onRender(() => {
                     onRender && onRender(webglPlane.current);
                 });
-
-            console.warn(">>> Adding plane", webglPlane.current);
         }
 
         let currentPlane = webglPlane.current;
@@ -116,7 +114,6 @@ export function Plane(props) {
             if(currentPlane) {
                 onBeforeRemove && onBeforeRemove(currentPlane);
 
-                console.warn(">>> Disposing plane", currentPlane.index);
                 currentPlane.remove();
             }
         }

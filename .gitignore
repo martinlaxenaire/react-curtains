@@ -1,3 +1,4 @@
 # misc
 /.idea
 /node_modules
+/dist

@@ -1,8 +1,9 @@
 {
   "name": "react-curtains",
-  "version": "0.1.2",
+  "version": "1.0.5",
   "description": "react-curtains is an attempt at converting curtains.js WebGL classes into reusable React components.",
-  "main": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "keywords": [
     "react",
     "webgl",
@@ -23,13 +24,28 @@
     "url": "https://github.com/martinlaxenaire/react-curtains.git"
   },
   "license": "MIT",
+  "scripts": {
+    "build": "rollup -c",
+    "prepare": "npm run build"
+  },
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "react-scripts": "3.4.3",
     "curtainsjs": "^7.1.4"
+  },
+  "peerDependencies": {
+    "react": ">=16.13.0",
+    "react-dom": ">=16.13.0"
+  },
+  "devDependencies": {
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-scripts": "3.4.0",
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.8.3",
+    "rollup-plugin-babel": "^4.4.0",
+    "@rollup/plugin-commonjs": "^15.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.2",
+    "rollup": "^2.21.0"
   }
 }
