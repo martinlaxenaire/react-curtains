@@ -160,3 +160,9 @@ Here's a complete prop list that you can pass to your `<Plane />` component (see
 #### Unmounting
 
 Each time the `<Plane />` component will unmount, the corresponding WebGL plane element will be automatically disposed.
+
+
+##### TODO: transitioning
+
+At the moment there's no way to keep a WebGL plane when the component unmounts (think about page transitions for example).
+Combining an `uniqueKey` property with the plane `resetPlane()` method should however do the trick. It should be implemented in an upcoming library version.

@@ -32,7 +32,7 @@ In order for it to work, you'll need to wrap your `App` into the `Curtains` comp
 
 Inside your `<Curtains />` component, you'll have access to a couple useful custom React hooks:
 
-#####useCurtains
+##### useCurtains
 
 ```javascript
 useCurtains(callback, dependencies);
@@ -48,7 +48,7 @@ useCurtains((curtains) => {
 });
 ```
 
-#####useCurtainsEvent
+##### useCurtainsEvent
 
 ```javascript
 useCurtainsEvent(event, callback, dependencies);
