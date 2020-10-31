@@ -73,7 +73,7 @@ Here are codesandboxes ports of some of the official documentation examples:
 - <a href="https://codesandbox.io/s/react-curtains-vertex-coordinates-helper-b0b06">Vertex coordinates helper</a>
 - <a href="https://codesandbox.io/s/react-curtains-simple-plane-ukzxi">Simple plane</a>
 - <a href="https://codesandbox.io/s/react-curtains-simple-video-plane-ckozr">Simple video plane</a>
-- <a href="https://codesandbox.io/s/react-curtains-slideshow-i7uim">Slideshow</a>
+- <a href="https://codesandbox.io/s/react-curtains-slideshow-i7uim">Slideshow using GSAP</a>
 - <a href="https://codesandbox.io/s/react-curtains-multiple-planes-zh9bt">Multiple planes</a>
 - <a href="https://codesandbox.io/s/react-curtains-multiple-planes-post-processed-1g5zj">Multiple planes with post processing</a>
 - <a href="https://codesandbox.io/s/react-curtains-selective-render-targets-vbsez">Selective render targets</a>
