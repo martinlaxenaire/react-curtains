@@ -83,8 +83,6 @@ function BasicShaderPass() {
     
     const onPassReady = (shaderPass) => {
         console.log("shader pass is ready", shaderPass);
-        // you can use any regular plane methods here
-        plane.moveToFront();
     };
     
     const onPassRender = (shaderPass) => {
