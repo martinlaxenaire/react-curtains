@@ -89,7 +89,7 @@ function BasicPlane() {
     const onPlaneReady = (plane) => {
         console.log("plane is ready", plane);
         // you can use any regular plane methods here
-        plane.moveToFront();
+        plane.setRenderOrder(1);
     };
     
     const onPlaneRender = (plane) => {
@@ -127,11 +127,11 @@ Here's a complete prop list that you can pass to your `<Plane />` component (see
 | fragmentShaderID | string | - | Plane fragment shader script tag ID |
 | widthSegments | int | - | Number of vertices along X axis |
 | heightSegments | int | - | Number of vertices along Y axis |
+| renderOrder | int | X | Determines in which order the plane is drawn |
 | depthTest | bool | X | Whether the Plane should enable or disable the depth test |
 | transparent | bool | - | If your Plane should handle transparency |
 | cullFace | string | - | Which face of the plane should be culled |
 | alwaysDraw | bool | X | If your Plane should always be drawn or use frustum culling |
-| shareProgram | bool | - | Whether this Plane should share its WebGL program with other planes |
 | visible | bool | X | Whether to draw your Plane |
 | drawCheckMargins | object | X | Additional margins to add in the frustum culling calculations, in pixels. |
 | watchScroll | bool | X | Whether the plane should auto update its position on scroll |

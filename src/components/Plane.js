@@ -12,11 +12,11 @@ export function Plane(props) {
         fragmentShaderID,
         widthSegments,
         heightSegments,
+        renderOrder,
         depthTest,
         transparent,
         cullFace,
         alwaysDraw,
-        shareProgram,
         visible,
         drawCheckMargins,
         watchScroll,
@@ -68,11 +68,11 @@ export function Plane(props) {
                 fragmentShaderID,
                 widthSegments,
                 heightSegments,
+                renderOrder,
                 depthTest,
                 transparent,
                 cullFace,
                 alwaysDraw,
-                shareProgram,
                 visible,
                 drawCheckMargins,
                 watchScroll,
@@ -147,14 +147,19 @@ export function Plane(props) {
             }
 
             // render target
-            if(target !== undefined) {
-                webglPlane.current.setRenderTarget(target);
+            if(watchScroll !== undefined) {
+                webglPlane.current.watchScroll = watchScroll;
+            }
+
+            // render order
+            if(renderOrder !== undefined) {
+                webglPlane.current.setRenderOrder(renderOrder);
             }
 
             // transformations
             if(relativeTranslation) {
                 const newTranslation = new Vec3();
-                if(rotation.length >= 3) {
+                if(relativeTranslation.length >= 3) {
                     newTranslation.set(relativeTranslation[0], relativeTranslation[1], relativeTranslation[2]);
                 }
 
@@ -196,6 +201,7 @@ export function Plane(props) {
         drawCheckMargins,
         visible,
         watchScroll,
+        renderOrder,
 
         depthTest,
 

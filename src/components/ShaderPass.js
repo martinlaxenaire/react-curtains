@@ -1,6 +1,6 @@
-import {useRef} from 'react';
+import {useEffect, useRef} from 'react';
 import {useCurtains} from '../hooks';
-import {ShaderPass as WebGLShaderPass} from 'curtainsjs';
+import {ShaderPass as WebGLShaderPass, Vec2, Vec3} from 'curtainsjs';
 
 export function ShaderPass(props) {
     // extract shader pass parameters and events from props
@@ -10,6 +10,7 @@ export function ShaderPass(props) {
         vertexShaderID,
         fragmentShader,
         fragmentShaderID,
+        renderOrder,
         depthTest,
         depth,
         clear,
@@ -48,6 +49,7 @@ export function ShaderPass(props) {
                 vertexShaderID,
                 fragmentShader,
                 fragmentShaderID,
+                renderOrder,
                 depthTest,
                 depth,
                 clear,
@@ -92,6 +94,15 @@ export function ShaderPass(props) {
             }
         }
     });
+
+    // handle parameters/properties that could be changed at runtime
+    useEffect(() => {
+        if(webglShaderPass.current) {
+            if(renderOrder !== undefined) {
+                webglShaderPass.current.setRenderOrder(renderOrder);
+            }
+        }
+    }, [renderOrder]);
 
     return props.children || null;
 }

@@ -74,6 +74,7 @@ export function useCurtainsEvent(event, callback, dependencies = []) {
     }, [dispatch, validEvent].concat(dependencies));
 }
 
+// TODO useless?
 export function useCurtainsAfterResize(callback, dependencies = []) {
     useCurtainsEvent("onAfterResize", callback, dependencies);
 }
