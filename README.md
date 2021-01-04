@@ -83,10 +83,39 @@ Here are codesandboxes ports of some of the official documentation examples:
 
 This is the port of <a href="https://www.curtainsjs.com/examples/basic-plane/index.html">curtains.js documentation basic example</a>:
 
+##### index.css
+
+```css
+/* curtains canvas container */
+
+.curtains-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* basic plane */
+
+.BasicPlane {
+  width: 100vw;
+  height: 100vh;
+}
+
+.BasicPlane img {
+  display: none;
+}
+```
+
+##### index.js
+
 ```jsx
 import ReactDOM from 'react-dom';
 import React from 'react';
 import {Curtains, Plane} from 'react-curtains';
+
+import './index.css';
 
 const basicVs = `
     precision mediump float;
