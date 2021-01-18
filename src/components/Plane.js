@@ -147,8 +147,8 @@ export function Plane(props) {
             }
 
             // render target
-            if(watchScroll !== undefined) {
-                webglPlane.current.watchScroll = watchScroll;
+            if(target !== undefined) {
+                webglPlane.current.setRenderTarget(target);
             }
 
             // render order
