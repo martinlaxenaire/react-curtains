@@ -1,4 +1,4 @@
-import {useRef} from 'react';
+import {useEffect, useRef} from 'react';
 import {useCurtains} from '../hooks';
 import {FXAAPass as WebGLFXAAPass} from 'curtainsjs';
 
@@ -7,6 +7,7 @@ export function FXAAPass(props) {
     const {
         // fxaa init parameters
         depthTest,
+        renderOrder,
         depth,
         clear,
         renderTarget,
@@ -39,13 +40,14 @@ export function FXAAPass(props) {
 
             webglFXAAPass.current = new WebGLFXAAPass(curtains, {
                 depthTest,
+                renderOrder,
                 depth,
                 clear,
                 renderTarget,
                 texturesOptions,
             });
 
-            webglFXAAPass.current.pass.onAfterRender(() => {
+            webglFXAAPass.current.onAfterRender(() => {
                     onAfterRender && onAfterRender(webglFXAAPass.current)
                 })
                 .onAfterResize(() => {
@@ -65,23 +67,30 @@ export function FXAAPass(props) {
                 });
 
             if(uniqueKey) {
-                webglFXAAPass.current.pass._uniqueKey = uniqueKey;
+                webglFXAAPass.current._uniqueKey = uniqueKey;
             }
 
             currentFXAAPass = webglFXAAPass.current;
         }
         else if(!webglFXAAPass.current) {
-            webglFXAAPass.current = {
-                pass: existingPass[0]
-            };
+            webglFXAAPass.current = existingPass[0];
         }
 
         return () => {
             if(currentFXAAPass) {
-                currentFXAAPass.pass.remove();
+                currentFXAAPass.remove();
             }
         }
     });
+
+    // handle parameters/properties that could be changed at runtime
+    useEffect(() => {
+        if(webglFXAAPass.current) {
+            if(renderOrder !== undefined) {
+                webglFXAAPass.current.setRenderOrder(renderOrder);
+            }
+        }
+    }, [renderOrder]);
 
     return props.children || null;
 }
