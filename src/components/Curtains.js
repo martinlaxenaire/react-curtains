@@ -143,10 +143,10 @@ function CurtainsWrapper(props) {
     validProps.children = null;
 
     return (
-        <div>
+        <>
             {props.children}
             <div {...validProps} ref={container} />
-        </div>
+        </>
     );
 }
 
