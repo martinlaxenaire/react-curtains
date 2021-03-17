@@ -8,6 +8,7 @@ const initialState = {
         onContextLost: [],
         onContextRestored: [],
         onError: [],
+        onSuccess: [],
         onRender: [],
         onScroll: [],
     },
@@ -61,5 +62,3 @@ export function CurtainsProvider({ children }) {
         </CurtainsContext.Provider>
     );
 }
-
-//export { CurtainsContext, CurtainsProvider };

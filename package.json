@@ -1,6 +1,6 @@
 {
   "name": "react-curtains",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "react-curtains is an attempt at converting curtains.js WebGL classes into reusable React components.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -29,7 +29,7 @@
     "prepare": "npm run build"
   },
   "dependencies": {
-    "curtainsjs": ">=8.0.2"
+    "curtainsjs": ">=8.1.0"
   },
   "peerDependencies": {
     "react": ">=16.13.0",

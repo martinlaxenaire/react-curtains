@@ -36,6 +36,7 @@ export function useCurtainsEvent(event, callback, dependencies = []) {
         "onContextLost",
         "onContextRestored",
         "onError",
+        "onSuccess",
         "onRender",
         "onScroll",
     ];
@@ -88,6 +89,10 @@ export function useCurtainsContextRestored(callback, dependencies = []) {
 
 export function useCurtainsError(callback, dependencies = []) {
     useCurtainsEvent("onError", callback, dependencies);
+}
+
+export function useCurtainsSuccess(callback, dependencies = []) {
+    useCurtainsEvent("onSuccess", callback, dependencies);
 }
 
 export function useCurtainsRender(callback, dependencies = []) {

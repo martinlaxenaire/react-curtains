@@ -31,6 +31,7 @@ function CurtainsWrapper(props) {
         onContextLost,
         onContextRestored,
         onError,
+        onSuccess,
         onRender,
         onScroll,
 
@@ -107,6 +108,14 @@ function CurtainsWrapper(props) {
 
                     // execute subscriptions hooks
                     state.subscriptions.onContextRestored.forEach(element => {
+                        element.callback && element.callback(curtains.current)
+                    });
+                })
+                .onSuccess(() => {
+                    onSuccess && onSuccess(curtains.current);
+
+                    // execute subscriptions hooks
+                    state.subscriptions.onSuccess.forEach(element => {
                         element.callback && element.callback(curtains.current)
                     });
                 })
