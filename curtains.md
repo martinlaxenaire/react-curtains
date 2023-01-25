@@ -64,7 +64,7 @@ function MainCurtains() {
             pixelRatio={Math.min(1.5, window.devicePixelRatio)}
             antialias={false}
             
-            onRender={onCurtainsError}
+            onError={onCurtainsError}
             onRender={onCurtainsRender}
         >
             <App />
